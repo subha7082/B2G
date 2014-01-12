@@ -146,6 +146,11 @@ case "$1" in
 	repo_sync $1
 	;;
 
+"TaoShan")
+        echo DEVICE=TaoShan >> .tmp-config &&
+        repo_sync $1
+        ;;
+
 *)
 	echo "Usage: $0 [-cdflnq] (device name)"
 	echo "Flags are passed through to |./repo sync|."
@@ -173,6 +178,7 @@ case "$1" in
 	echo - emulator-jb
 	echo - emulator-x86
 	echo - emulator-x86-jb
+	echo - TaoShan
 	exit -1
 	;;
 esac
